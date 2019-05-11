@@ -1,0 +1,99 @@
+<%- include('../includes/Head.ejs') %>
+<link rel="stylesheet" href="styles/User/user.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body>
+
+    <%- include('../includes/Navigation.ejs') %>
+
+
+    <<div class="container">
+
+        <% if (Users) { %>
+
+        <div class="row">
+            <div class="title-user w-100 d-block text-center">
+                <h2> MANAGEMENT USERS</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-users">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                ID
+                            </th>
+                            <th scope="col">
+                                Họ Tên
+                            </th>
+                            <th scope="col">
+                                Ngày Sinh
+
+                            </th>
+                            <th scope="col">
+                                Email
+
+                            </th>
+                            <th scope="col">
+                                Active
+                            </th>
+                            <th scope="col">
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <% Users.map( user =>{ %>                        
+
+                        <tr>
+                            <td>
+                                <%=user._id %>
+                            </td>
+                            <td>
+                                <%=user.Name %>
+                            </td>
+                            <td>
+                                <%=user.Date %>
+                            </td>
+                            <td>
+                                <%=user.Email %>
+                            </td>
+                            <td>
+                                <a href="/User/<%=user._id%>" class="view">view</a>
+                            </td>
+                            <td class="feautures">
+                                <form action="/User/delete-user" method="POST">
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-times"></i>
+                                        <input type="hidden" name="productId" value="1">
+                                    </button>
+
+                                </form>
+                                <form action="User/Edit">
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+
+                                </form>
+
+                            </td>
+                        </tr>
+                        
+                        <% }) %>                         
+                     </tbody>
+                </table>
+            </div>
+        </div>
+        <% } else { %>
+
+            <h1> NOT FOUND USERS</h1>
+
+         <% } %> 
+    </div> 
+
+
+    
+    <%- include('../includes/End.ejs') %>

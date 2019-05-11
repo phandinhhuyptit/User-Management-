@@ -1,0 +1,13 @@
+.nav-link.Gray {
+  color: gray;
+}
+
+.nav-link.Gray:hover {
+  background: #d6cccc;
+}
+
+.Active {
+  color: #007bff !important;
+  background-color: #d6cccc;
+}
+/*# sourceMappingURL=nav.css.map */

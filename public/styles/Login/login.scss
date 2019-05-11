@@ -1,0 +1,42 @@
+@import "../include/nav/nav.scss";
+@import "../include/reset/reset.scss";
+
+$width-login: 100%;
+$padding-login: 5%;
+.row {
+
+    div[class=title-account] {
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+        margin-bottom: 5%;      
+    }
+
+  .login {
+   
+    width: $width-login;
+    display: flex;
+    justify-content: center;
+   
+    .form-login {
+
+        width: 500px;
+        height: 400px ;
+        border: 1px solid gainsboro;
+        border-radius: 9px;
+        padding: $padding-login;
+
+      .form-group {
+
+        input[type="email"] {
+          width: 100%;
+        }
+        input[type="password"] {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

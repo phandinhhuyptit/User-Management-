@@ -1,0 +1,39 @@
+@import '../include/nav/nav.scss';
+@import '../include/reset/reset.scss';
+$width-table : 100%;
+$none : none;
+
+.row{
+    .table-users {
+    
+        width: $width-table; 
+        .table {
+    
+            tbody{
+    
+                .feautures{
+    
+                    display: inline-flex;
+                    width: 100%;
+                }
+                .view {
+
+                    text-decoration: $none;
+                }    
+            }
+        }
+        
+    }
+
+   .title-user {
+
+        h2{
+            font-size: 4vh;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+      }
+   } 
+
+
+}
+

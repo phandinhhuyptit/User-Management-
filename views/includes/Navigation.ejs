@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <ul class="nav d-none d-md-inline-flex">
+            <li class="nav-item">
+                <a class="nav-link Gray " href="/Home">Coders Tokyo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link Gray  <%=Path ==='Home' ?'Active' :'' %>" href="/Home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link Gray <%= Path ==='User' ?'Active' :'' %>" href="/User">Users</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link Gray <%=Path ==='Login' ?'Active' :''%>" href="/Login">Login</a>
+            </li>
+            <li class="nav-item ">
+                    <a class="nav-link Gray <%=Path ==='SignUp' ?'Active' :'' %>" href="/SignUp">Register</a>
+            </li>
+        </ul>
+        <ul class="moblie-nav d-sm-block d-md-none ">
+                <li class="nav-item ">
+                    <a class="nav-link Gray " href="/Home">Coders Tokyo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link Gray  <%=Path ==='Home' ?'Active' :'' %> " href="/Home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link Gray <%= Path ==='User' ?'Active' :'' %>" href="/User">Users</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link Gray <%=Path ==='Login' ?'Active' :'' %>" href="/Login">Login</a>
+                </li>
+                <li class="nav-item ">
+                        <a class="nav-link Gray <%=Path ==='SignUp' ?'Active' :'' %>" href="/SignUp">Register</a>
+                </li>
+        </ul>    
+    </div>
+</div>

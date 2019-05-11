@@ -1,0 +1,35 @@
+<%- include('../includes/Head.ejs') %>
+<link rel="stylesheet" href="styles/User/user.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body>
+
+
+    <%- include('../includes/Navigation.ejs') %>
+
+    
+        <div class="container">
+
+          <% if(User) { %>
+
+            
+
+                <h2 class="text-center">Detail User</h2>
+                <p>Id : <%=User._id %> </p>
+                <p> Name : <%=User.Name %> </p>
+                <p> Email : <%=User.Email%> </p>
+                <p> Date :  <%=User.Date%> </p>
+            
+            <% } else { %>
+                
+                <h1> Not Found </h1>
+
+             <% } %>   
+
+        </div>    
+        
+
+
+    
+    <%- include('../includes/End.ejs') %>

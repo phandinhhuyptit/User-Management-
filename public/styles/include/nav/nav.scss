@@ -1,0 +1,23 @@
+
+
+$colorNav : gray;
+$Active :  #007bff;
+$superPower : blue ;
+$colorBackground :  #d6cccc; 
+
+.nav-link.Gray {
+    &:hover{
+
+        background: #d6cccc;
+
+    }
+    color: $colorNav;
+
+
+}
+.Active {
+
+    color : $Active!important;
+    background-color: $colorBackground; 
+}
+

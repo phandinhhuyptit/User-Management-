@@ -1,0 +1,40 @@
+.nav-link.Gray {
+  color: gray;
+}
+
+.nav-link.Gray:hover {
+  background: #d6cccc;
+}
+
+.Active {
+  color: #007bff !important;
+  background-color: #d6cccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.row .table-users {
+  width: 100%;
+}
+
+.row .table-users .table tbody .feautures {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+}
+
+.row .table-users .table tbody .view {
+  text-decoration: none;
+}
+
+.row .title-user h2 {
+  font-size: 4vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+/*# sourceMappingURL=user.css.map */

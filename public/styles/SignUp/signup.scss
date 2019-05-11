@@ -1,0 +1,49 @@
+@import  '../include/nav/nav.scss';
+@import '../include/reset/reset.scss';
+
+@mixin defautFlex ($display,$justify-content,$align-items){
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin border ($borderSolid ,$borderRadius){
+
+    border : $borderSolid;
+    border-radius: $borderRadius;
+
+}
+
+
+.row {
+    .title-signup{
+
+        margin-top: 3%;
+        margin-bottom: 3%;
+
+    }
+    .signUp{
+       @include defautFlex(flex,center,center);
+       margin-bottom: 5%;
+     .form-singup{
+
+        @include border( 1px solid rgb(228, 214, 214), 4% );        
+        .user-message--error {
+            border-color: red;
+            background: rgb(255, 176, 176);
+            color: red;
+          }
+          .user-message {
+            margin: auto;
+            width: 90%;
+            border: 1px solid #4771fa;
+            padding: 0.5rem;
+            border-radius: 3px;
+            background: #b9c9ff;
+            text-align: center;
+          }
+     }
+    }
+
+}
+
+  
