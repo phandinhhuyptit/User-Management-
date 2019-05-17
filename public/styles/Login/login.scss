@@ -3,6 +3,10 @@
 
 $width-login: 100%;
 $padding-login: 5%;
+
+
+
+
 .row {
 
     div[class=title-account] {
@@ -27,6 +31,25 @@ $padding-login: 5%;
         border: 1px solid gainsboro;
         border-radius: 9px;
         padding: $padding-login;
+        .invalid {
+
+          border-color: red;
+        
+        }
+        .user-message--error {
+          border-color: red;
+          background: rgb(255, 176, 176);
+          color: red;
+        }
+        .user-message {
+          margin: auto;
+          width: 100%;
+          border: 1px solid #e41a1a;
+          padding: 0.5rem;
+          border-radius: 3px;
+          background: #eaeaea;;
+          text-align: center;
+        }
 
       .form-group {
 

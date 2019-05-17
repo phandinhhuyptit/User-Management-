@@ -50,6 +50,26 @@
   padding: 5%;
 }
 
+.row .login .form-login .invalid {
+  border-color: red;
+}
+
+.row .login .form-login .user-message--error {
+  border-color: red;
+  background: #ffb0b0;
+  color: red;
+}
+
+.row .login .form-login .user-message {
+  margin: auto;
+  width: 100%;
+  border: 1px solid #e41a1a;
+  padding: 0.5rem;
+  border-radius: 3px;
+  background: #eaeaea;
+  text-align: center;
+}
+
 .row .login .form-login .form-group input[type="email"] {
   width: 100%;
 }

@@ -13,7 +13,11 @@
 
 }
 
+.invalid {
 
+    border-color: red;
+
+}
 .row {
     .title-signup{
 
@@ -34,11 +38,11 @@
           }
           .user-message {
             margin: auto;
-            width: 90%;
-            border: 1px solid #4771fa;
+            width: 100%;
+            border: 1px solid #e41a1a;
             padding: 0.5rem;
             border-radius: 3px;
-            background: #b9c9ff;
+            background: #eaeaea;;
             text-align: center;
           }
      }

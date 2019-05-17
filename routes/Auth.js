@@ -10,7 +10,7 @@ router.get('/Login',[
     .isEmail().withMessage('Please enter a valid email')
     .isLength({min : 7}).withMessage('Please Enter Email Least 7 Charaters!')
     .custom((value , {req}) =>{        
-       return User.findOne({Email : value.lowercase()})
+       return User.findOne({Email : value.toLowerCase()})
         .then( user =>{
 
                 if(!user) {
@@ -26,7 +26,7 @@ router.get('/Login',[
 
 
     ],authController.getLogin);
-
+router.post('/Login',authController.signIn);
 router.get('/SignUp',authController.getSignUp);
 router.post('/SignUp',[
     check('name')
@@ -102,4 +102,38 @@ router.post('/SignUp',[
            
     })
 ],authController.registerUser);
+router.post('/api/post', verifyToken,authController.getToken);
+
+
+function verifyToken  (req,res,next) {
+
+    // Get auth Header value
+    const bearerHeader =req.headers['authorization'];
+    // Check if bearer is undefinded
+    if( typeof bearerHeader !== 'undefined' ){
+
+        // Split at the space 
+        const bearer = bearerHeader.split(' ');
+        // Get Token from away
+        const bearerToken = bearer[1];
+        req.token = bearerToken;
+        // Next Middware
+        next();
+    } else {
+        // Forbidden
+        res.status(403).json({
+
+            message : "No Match Token"
+
+        });
+    }   
+       
+
+}
+
+
+
+
+
+
 module.exports= router;

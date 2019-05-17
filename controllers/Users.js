@@ -142,10 +142,7 @@ exports.addUser = (req, res, next) => {
                 err: err
 
             })
-
         })
-
-
 }
 exports.getDetailUser = (req, res, next) => {
 
